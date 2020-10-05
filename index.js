@@ -5,7 +5,7 @@ var cors = require('cors');
 var port = process.env.port || 5000;
 var router = express.Router();
 var mongoose = require('mongoose');
-mongoose.connect("mongodb+srv://hadi:hadi1234@curd-api-agove.mongodb.net/Curd-data?retryWrites=true",{useNewUrlParser: true},(err)=>{
+mongoose.connect("mongodb+srv://hadi:hadi1234@curd-api-agove.mongodb.net/Curd-data?retryWrites=true",{useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false},(err)=>{
     console.log(err)
 });
 
